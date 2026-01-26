@@ -12,8 +12,8 @@ function CheckoutContent() {
   const searchParams = useSearchParams()
   const quantity = Number.parseInt(searchParams.get("quantity") || "1")
 
-  const ONLINE_PRICE = 1099
-  const COD_PRICE = 1299
+  const ONLINE_PRICE = 1
+  const COD_PRICE = 1
 
   const [paymentMethod, setPaymentMethod] = useState<"online" | "cod" | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)

@@ -99,7 +99,7 @@ export function ProductCarousel({ slides = defaultSlides }: { slides?: CarouselS
 
       <button
         onClick={prevSlide}
-        className="absolute left-3 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-lg text-white p-2.5 sm:p-3 md:p-4 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 hover:scale-125 text-base sm:text-lg md:text-xl font-bold shadow-xl hover:shadow-2xl border border-white/30"
+        className="absolute left-3 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 backdrop-blur-lg text-white p-2.5 sm:p-3 md:p-4 rounded-full transition-all duration-300 opacity-100 hover:scale-125 text-base sm:text-lg md:text-xl font-bold shadow-xl hover:shadow-2xl border border-white/40"
         aria-label="Previous slide"
       >
         ❮
