@@ -110,6 +110,18 @@ export default function ProductPage() {
       id: 3,
       image: "/c3.jpeg",
     },
+    {
+      id: 4,
+      image: "/c4.jpeg",
+    },
+    {
+      id: 5,
+      image: "/c5.jpeg",
+    },
+    {
+      id: 6,
+      image: "/c6.jpeg",
+    },
   ]
 
   return (

@@ -20,6 +20,18 @@ const defaultSlides: CarouselSlide[] = [
     id: 3,
     image: "/c3.jpeg",
   },
+  {
+    id: 4,
+    image: "/c4.jpeg",
+  },
+  {
+    id: 5,
+    image: "/c5.jpeg",
+  },
+  {
+    id: 6,
+    image: "/c6.jpeg",
+  },
 ]
 
 export function ProductCarousel({ slides = defaultSlides }: { slides?: CarouselSlide[] }) {
@@ -33,7 +45,7 @@ export function ProductCarousel({ slides = defaultSlides }: { slides?: CarouselS
     const interval = setInterval(() => {
       setIsTransitioning(true)
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 3500)
+    }, 2000)
 
     return () => clearInterval(interval)
   }, [autoPlay, slides.length])
@@ -95,7 +107,7 @@ export function ProductCarousel({ slides = defaultSlides }: { slides?: CarouselS
 
       <button
         onClick={nextSlide}
-        className="absolute right-3 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 backdrop-blur-lg text-white p-2.5 sm:p-3 md:p-4 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 hover:scale-125 text-base sm:text-lg md:text-xl font-bold shadow-xl hover:shadow-2xl border border-white/30"
+        className="absolute right-3 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 backdrop-blur-lg text-white p-2.5 sm:p-3 md:p-4 rounded-full transition-all duration-300 opacity-100 hover:scale-125 text-base sm:text-lg md:text-xl font-bold shadow-xl hover:shadow-2xl border border-white/40"
         aria-label="Next slide"
       >
         ❯
