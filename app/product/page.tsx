@@ -100,15 +100,15 @@ export default function ProductPage() {
   const productSlides = [
     {
       id: 1,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/33k-3NmR7Ht0sVJ6PVqkfe6l8MvSekXSCK.jpg",
+      image: "/c1.jpeg",
     },
     {
       id: 2,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/22-ElqzjDe5ZGHnB0ZWAHP0xfF0vshXPp.jpg",
+      image: "/c2.jpeg",
     },
     {
       id: 3,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/44-RbEPHe3M0S5KP0t7hcALao98TIPCpV.jpg",
+      image: "/c3.jpeg",
     },
   ]
 
