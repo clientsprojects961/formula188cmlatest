@@ -40,6 +40,9 @@ function PaymentContent() {
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank")
   }
 
+  // Toggle for direct UPI app payment buttons (currently turned off)
+  const ENABLE_DIRECT_UPI_APPS = false
+
   // Generate UPI payment links for different apps
   const generateUPILink = (app: string) => {
     const amount = Number(total) || 0
@@ -159,73 +162,75 @@ function PaymentContent() {
           {/* Payment Methods */}
           {method === "online" && (
             <>
-              {/* Direct UPI App Payments */}
-              <div className="mb-12">
-                <h2 className="text-2xl font-bold mb-4">Pay with UPI Apps</h2>
-                <p className="text-muted-foreground mb-6">Click on your preferred UPI app to pay directly</p>
-                
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
-                  {/* PhonePe */}
-                  <button
-                    onClick={() => handleAppPayment("phonepe")}
-                    className="p-6 bg-gradient-to-br from-[#5F259F] to-[#7B3FA3] text-white rounded-xl hover:shadow-lg transition-all hover:scale-105 flex flex-col items-center justify-center gap-3 border-2 border-transparent hover:border-white/20"
-                  >
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl font-bold text-[#5F259F]">
-                      P
-                    </div>
-                    <span className="font-semibold text-sm">PhonePe</span>
-                  </button>
+              {/* Direct UPI App Payments (disabled) */}
+              {ENABLE_DIRECT_UPI_APPS && (
+                <div className="mb-12">
+                  <h2 className="text-2xl font-bold mb-4">Pay with UPI Apps</h2>
+                  <p className="text-muted-foreground mb-6">Click on your preferred UPI app to pay directly</p>
+                  
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-6">
+                    {/* PhonePe */}
+                    <button
+                      onClick={() => handleAppPayment("phonepe")}
+                      className="p-6 bg-gradient-to-br from-[#5F259F] to-[#7B3FA3] text-white rounded-xl hover:shadow-lg transition-all hover:scale-105 flex flex-col items-center justify-center gap-3 border-2 border-transparent hover:border-white/20"
+                    >
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl font-bold text-[#5F259F]">
+                        P
+                      </div>
+                      <span className="font-semibold text-sm">PhonePe</span>
+                    </button>
 
-                  {/* Google Pay */}
-                  <button
-                    onClick={() => handleAppPayment("gpay")}
-                    className="p-6 bg-gradient-to-br from-[#4285F4] to-[#34A853] text-white rounded-xl hover:shadow-lg transition-all hover:scale-105 flex flex-col items-center justify-center gap-3 border-2 border-transparent hover:border-white/20"
-                  >
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-2xl font-bold bg-gradient-to-r from-[#4285F4] to-[#34A853] bg-clip-text text-transparent">G</span>
-                    </div>
-                    <span className="font-semibold text-sm">Google Pay</span>
-                  </button>
+                    {/* Google Pay */}
+                    <button
+                      onClick={() => handleAppPayment("gpay")}
+                      className="p-6 bg-gradient-to-br from-[#4285F4] to-[#34A853] text-white rounded-xl hover:shadow-lg transition-all hover:scale-105 flex flex-col items-center justify-center gap-3 border-2 border-transparent hover:border-white/20"
+                    >
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                        <span className="text-2xl font-bold bg-gradient-to-r from-[#4285F4] to-[#34A853] bg-clip-text text-transparent">G</span>
+                      </div>
+                      <span className="font-semibold text-sm">Google Pay</span>
+                    </button>
 
-                  {/* Paytm */}
-                  <button
-                    onClick={() => handleAppPayment("paytm")}
-                    className="p-6 bg-gradient-to-br from-[#00BAF2] to-[#002970] text-white rounded-xl hover:shadow-lg transition-all hover:scale-105 flex flex-col items-center justify-center gap-3 border-2 border-transparent hover:border-white/20"
-                  >
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl font-bold text-[#002970]">
-                      P
-                    </div>
-                    <span className="font-semibold text-sm">Paytm</span>
-                  </button>
+                    {/* Paytm */}
+                    <button
+                      onClick={() => handleAppPayment("paytm")}
+                      className="p-6 bg-gradient-to-br from-[#00BAF2] to-[#002970] text-white rounded-xl hover:shadow-lg transition-all hover:scale-105 flex flex-col items-center justify-center gap-3 border-2 border-transparent hover:border-white/20"
+                    >
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl font-bold text-[#002970]">
+                        P
+                      </div>
+                      <span className="font-semibold text-sm">Paytm</span>
+                    </button>
 
-                  {/* BHIM */}
-                  <button
-                    onClick={() => handleAppPayment("bhim")}
-                    className="p-6 bg-gradient-to-br from-[#FF6B35] to-[#F7931E] text-white rounded-xl hover:shadow-lg transition-all hover:scale-105 flex flex-col items-center justify-center gap-3 border-2 border-transparent hover:border-white/20"
-                  >
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl font-bold text-[#FF6B35]">
-                      B
-                    </div>
-                    <span className="font-semibold text-sm">BHIM</span>
-                  </button>
+                    {/* BHIM */}
+                    <button
+                      onClick={() => handleAppPayment("bhim")}
+                      className="p-6 bg-gradient-to-br from-[#FF6B35] to-[#F7931E] text-white rounded-xl hover:shadow-lg transition-all hover:scale-105 flex flex-col items-center justify-center gap-3 border-2 border-transparent hover:border-white/20"
+                    >
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-2xl font-bold text-[#FF6B35]">
+                        B
+                      </div>
+                      <span className="font-semibold text-sm">BHIM</span>
+                    </button>
 
-                  {/* WhatsApp Pay */}
-                  <button
-                    onClick={() => handleAppPayment("whatsapp")}
-                    className="p-6 bg-gradient-to-br from-[#25D366] to-[#128C7E] text-white rounded-xl hover:shadow-lg transition-all hover:scale-105 flex flex-col items-center justify-center gap-3 border-2 border-transparent hover:border-white/20"
-                  >
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                      <Image src="/wp.png" alt="WhatsApp" width={40} height={40} className="rounded-full" />
-                    </div>
-                    <span className="font-semibold text-sm">WhatsApp Pay</span>
-                  </button>
+                    {/* WhatsApp Pay */}
+                    <button
+                      onClick={() => handleAppPayment("whatsapp")}
+                      className="p-6 bg-gradient-to-br from-[#25D366] to-[#128C7E] text-white rounded-xl hover:shadow-lg transition-all hover:scale-105 flex flex-col items-center justify-center gap-3 border-2 border-transparent hover:border-white/20"
+                    >
+                      <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                        <Image src="/wp.png" alt="WhatsApp" width={40} height={40} className="rounded-full" />
+                      </div>
+                      <span className="font-semibold text-sm">WhatsApp Pay</span>
+                    </button>
+                  </div>
+
+                  <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-900">
+                    <p className="font-semibold mb-1">Amount: ₹{total}</p>
+                    <p className="text-xs">Clicking an app will open it with payment details pre-filled. Just confirm to complete payment.</p>
+                  </div>
                 </div>
-
-                <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-900">
-                  <p className="font-semibold mb-1">Amount: ₹{total}</p>
-                  <p className="text-xs">Clicking an app will open it with payment details pre-filled. Just confirm to complete payment.</p>
-                </div>
-              </div>
+              )}
 
               {/* Manual UPI Payment */}
               <div
