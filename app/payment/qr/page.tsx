@@ -156,7 +156,7 @@ function QRPaymentContent() {
               </li>
               <li className="flex gap-3">
                 <span className="font-bold">2.</span>
-                <span>Send it to us via WhatsApp or Email</span>
+                <span>Send it to us via WhatsApp</span>
               </li>
               <li className="flex gap-3">
                 <span className="font-bold">3.</span>
@@ -195,24 +195,6 @@ function QRPaymentContent() {
                     </button>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="p-6 bg-card border border-border rounded-lg">
-              <h3 className="font-bold mb-4 flex items-center gap-2">
-                <Mail className="w-5 h-5 text-blue-600" />
-                Send Payment Screenshot via Email
-              </h3>
-              <a
-                href={`mailto:${SUPPORT_EMAIL}?subject=Payment Screenshot - Formula188CM Order (₹${total})&body=Please find my payment screenshot attached. Order Amount: ₹${total}`}
-                className="w-full inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
-              >
-                Send Email
-              </a>
-              <div className="mt-3 p-3 bg-muted rounded text-sm text-muted-foreground">
-                <p>
-                  <span className="font-semibold">Email:</span> {SUPPORT_EMAIL}
-                </p>
               </div>
             </div>
           </div>

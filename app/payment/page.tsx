@@ -286,11 +286,7 @@ function PaymentContent() {
                 </div>
 
                 <div className="space-y-3 mb-4">
-                  <div className="flex justify-between py-3 border-b border-border">
-                    <span className="text-muted-foreground">Account Holder</span>
-                    <span className="font-semibold">AYUSH KUMAR</span>
-                  </div>
-                  <div className="flex justify-between py-3 border-b border-border">
+              <div className="flex justify-between py-3 border-b border-border">
                     <span className="text-muted-foreground">Bank Name</span>
                     <span className="font-semibold">Yes Bank</span>
                   </div>
@@ -384,12 +380,6 @@ function PaymentContent() {
                 <Image src="/wp.png" alt="WhatsApp" width={20} height={20} />
                 Chat on WhatsApp
               </button>
-              <a
-                href={`mailto:${SUPPORT_EMAIL}`}
-                className="flex items-center justify-center gap-2 px-6 py-3 border border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-colors"
-              >
-                Email Support
-              </a>
             </div>
           </div>
         </div>
