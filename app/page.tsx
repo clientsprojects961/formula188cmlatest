@@ -193,6 +193,21 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="flex flex-col sm:flex-row gap-3 justify-center pt-6 md:pt-8 px-2">
+              <Link
+                href="/product"
+                className="px-6 md:px-8 py-2.5 md:py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 text-center shadow-lg hover:shadow-xl text-sm md:text-base"
+              >
+                Buy Now
+              </Link>
+              <button
+                onClick={scrollToSection}
+                className="px-6 md:px-8 py-2.5 md:py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-all duration-300 text-sm md:text-base"
+              >
+                Learn More
+              </button>
+            </div>
+
       {/* Rating Bar Section - After Carousel */}
       <section className="py-6 md:py-8 px-3 sm:px-4 lg:px-8 bg-card border-y border-border">
         <div className="max-w-4xl mx-auto">
@@ -262,20 +277,7 @@ export default function Home() {
             </div>
 
           
-            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-6 md:pt-8 px-2">
-              <Link
-                href="/product"
-                className="px-6 md:px-8 py-2.5 md:py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 text-center shadow-lg hover:shadow-xl text-sm md:text-base"
-              >
-                Buy Now
-              </Link>
-              <button
-                onClick={scrollToSection}
-                className="px-6 md:px-8 py-2.5 md:py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-all duration-300 text-sm md:text-base"
-              >
-                Learn More
-              </button>
-            </div>
+            
           </div>
         </div>
       </section>
