@@ -333,15 +333,15 @@
   @keyframes cta-glow {
     0% {
       transform: translateY(0) scale(1);
-      box-shadow: 0 10px 28px rgba(255, 215, 0, 0.22);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
     }
     50% {
       transform: translateY(-1px) scale(1.05);
-      box-shadow: 0 16px 45px rgba(255, 215, 0, 0.35);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
     }
     100% {
       transform: translateY(0) scale(1);
-      box-shadow: 0 10px 28px rgba(255, 215, 0, 0.22);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
     }
   }
 
