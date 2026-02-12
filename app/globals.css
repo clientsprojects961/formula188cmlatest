@@ -332,15 +332,12 @@
   /* Premium CTA animation for primary Buy Now button */
   @keyframes cta-glow {
     0% {
-      transform: translateY(0) scale(1);
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
     }
     50% {
-      transform: translateY(-1px) scale(1.05);
       box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35);
     }
     100% {
-      transform: translateY(0) scale(1);
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
     }
   }
@@ -366,9 +363,8 @@
   .btn-cta-glow {
     position: relative;
     overflow: hidden;
-    background-image: linear-gradient(135deg, oklch(0.78 0.23 75) 0%, oklch(0.82 0.19 95) 50%, oklch(0.78 0.23 75) 100%);
     animation: cta-glow 2.4s ease-in-out infinite;
-    will-change: transform, box-shadow;
+    will-change: box-shadow;
   }
 
   .btn-cta-glow::before {
@@ -385,7 +381,7 @@
     opacity: 0;
     pointer-events: none;
     mix-blend-mode: screen;
-    animation: cta-sheen 3.2s ease-in-out infinite;
+    animation: cta-sheen 1.6s ease-in-out infinite;
   }
 
   /* Hide scrollbar for swipe carousels */
