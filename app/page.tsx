@@ -166,7 +166,21 @@ export default function Home() {
         </div>
       </section>
 
-   
+      {/* Primary CTA directly under carousel */}
+      <div className="flex flex-col sm:flex-row gap-3 justify-center pt-6 md:pt-8 px-2">
+              <Link
+                href="/product"
+          className="px-6 md:px-8 py-2.5 md:py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 text-center shadow-lg hover:shadow-xl text-sm md:text-base btn-cta-glow"
+              >
+                Buy Now
+              </Link>
+              <button
+                onClick={scrollToSection}
+                className="px-6 md:px-8 py-2.5 md:py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-all duration-300 text-sm md:text-base"
+              >
+                Learn More
+              </button>
+            </div>
 
       {/* Guaranteed Growth Highlight - Aesthetic Design */}
       <section className="py-6 md:py-8 px-3 sm:px-4 lg:px-8">
@@ -177,7 +191,7 @@ export default function Home() {
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary rounded-full blur-3xl"></div>
             </div>
-            
+
             <div className="relative text-center">
               <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 border border-primary/20 rounded-full mb-3 md:mb-4">
                 <span className="text-primary text-xs md:text-sm font-semibold uppercase tracking-wider">100% Guaranteed</span>
@@ -192,21 +206,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <div className="flex flex-col sm:flex-row gap-3 justify-center pt-6 md:pt-8 px-2">
-              <Link
-                href="/product"
-                className="px-6 md:px-8 py-2.5 md:py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 text-center shadow-lg hover:shadow-xl text-sm md:text-base"
-              >
-                Buy Now
-              </Link>
-              <button
-                onClick={scrollToSection}
-                className="px-6 md:px-8 py-2.5 md:py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-all duration-300 text-sm md:text-base"
-              >
-                Learn More
-              </button>
-            </div>
 
       {/* Rating Bar Section - After Carousel */}
       <section className="py-6 md:py-8 px-3 sm:px-4 lg:px-8 bg-card border-y border-border">

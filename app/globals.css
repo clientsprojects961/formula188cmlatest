@@ -329,6 +329,27 @@
     box-shadow: 0 12px 28px rgba(0,0,0,0.12);
   }
 
+  /* Premium CTA animation for primary Buy Now button */
+  @keyframes cta-glow {
+    0% {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    }
+    50% {
+      transform: translateY(-1px) scale(1.04);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.26);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    }
+  }
+
+  .btn-cta-glow {
+    animation: cta-glow 2.6s ease-in-out infinite;
+    will-change: transform, box-shadow;
+  }
+
   /* Hide scrollbar for swipe carousels */
   .no-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */
