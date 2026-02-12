@@ -329,37 +329,28 @@
     box-shadow: 0 12px 28px rgba(0,0,0,0.12);
   }
 
-  /* Premium CTA animation for primary Buy Now button */
+  /* Premium CTA animation for primary Buy Now button (HeightVeda-style shine, in black) */
   @keyframes cta-glow {
     0% {
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      transform: scale(1);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
     }
     50% {
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
-      transform: scale(1.03);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
     }
     100% {
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      transform: scale(1);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
     }
   }
-  
-  .btn-cta-glow {
-    position: relative;
-    overflow: hidden;
-    animation: cta-glow 1s ease-in-out infinite;
-  }
-  
-  /* @keyframes cta-sheen {
+
+  @keyframes cta-sheen {
     0% {
       transform: translateX(-140%) skewX(-18deg);
       opacity: 0;
     }
-    15% {
-      opacity: 0.6;
+    10% {
+      opacity: 0.75;
     }
-    35% {
+    40% {
       transform: translateX(140%) skewX(-18deg);
       opacity: 0;
     }
@@ -367,14 +358,14 @@
       transform: translateX(140%) skewX(-18deg);
       opacity: 0;
     }
-  } */
+  }
 
-  /* .btn-cta-glow {
+  .btn-cta-glow {
     position: relative;
     overflow: hidden;
-    animation: cta-glow 3.6s ease-in-out infinite;
+    animation: cta-glow 1.1s ease-in-out infinite;
     will-change: box-shadow;
-  } */
+  }
 
   .btn-cta-glow::before {
     content: "";
@@ -383,16 +374,14 @@
     background: linear-gradient(
       120deg,
       rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.85) 45%,
+      rgba(255, 255, 255, 0.9) 45%,
       rgba(255, 255, 255, 0) 75%
     );
     transform: translateX(-140%) skewX(-18deg);
     opacity: 0;
     pointer-events: none;
     mix-blend-mode: screen;
-    animation: cta-sheen 2.5s linear infinite;
-    opacity: 0.4;
-
+    animation: cta-sheen 1s ease-in-out infinite;
   }
 
   /* Hide scrollbar for swipe carousels */
