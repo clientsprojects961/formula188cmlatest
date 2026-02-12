@@ -363,7 +363,7 @@
   .btn-cta-glow {
     position: relative;
     overflow: hidden;
-    animation: cta-glow 2.4s ease-in-out infinite;
+    animation: cta-glow 3.6s ease-in-out infinite;
     will-change: box-shadow;
   }
 
@@ -381,7 +381,7 @@
     opacity: 0;
     pointer-events: none;
     mix-blend-mode: screen;
-    animation: cta-sheen 1.6s ease-in-out infinite;
+    animation: cta-sheen 3.4s ease-in-out infinite;
   }
 
   /* Hide scrollbar for swipe carousels */
