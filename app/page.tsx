@@ -19,7 +19,7 @@ export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false)
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
 
-  const testimonials = ["/t1.mp4", "/t2.mp4", "/t3.mp4", "/t4.mp4", "/t5.mp4"]
+  const testimonials = ["/t2.mp4", "/t3.mp4", "/t4.mp4", "/t5.mp4"]
   const posters = ["/t1.jpeg", "/t2.jpeg", "/t3.jpeg", "/t4.jpeg", "/t5.jpeg"]
   const reviewBase = [
     {
